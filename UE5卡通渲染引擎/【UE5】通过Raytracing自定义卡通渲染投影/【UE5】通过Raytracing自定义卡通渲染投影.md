@@ -1,6 +1,6 @@
 
 ![](attachments/0_通过Raytracing自定义卡通渲染投影.png)
-发现之前写的文章很多图片被知乎压得很糊，一些代码的图片更是根本看不清，所有我打算以后写的文章时把markdown文件和所有图片都上传到github上，如果有需要还请移步以下github仓库：
+发现之前写的文章很多图片被知乎压得很糊，一些代码的图片更是根本看不清，所有我打算以后写文章时把markdown文件和所有图片都上传到github上，如果有需要还请移步以下github仓库：
 https://github.com/Yu-ki016/Yu-ki016-Articles/tree/main
 
 另外，本文的修改也都上传github了，对应下图的提交记录：
@@ -111,7 +111,7 @@ https://intro-to-dxr.cwyman.org/
 
 - Generation Shader通过TraceRay()从着色点发射一条指向光源方向的射线
 - 如果射线没有击中任何物体(没有任何有效的Hit)，则说明该像素被光源照亮
-- 如果射线击中任何物体，则说明该像素被光源照亮
+- 如果射线击中任何物体，则说明该像素在阴影中
 
 根据上面信息，我们如果想去除自阴影的话，其实只需要在AnyHit Shader里判断射线击中的物体是否自身，如果是自身，则调用IgnoreHit()舍弃这个Hit。同样的，如果我们想排除自阴影之外的其他投影，也可以在AnyHit Shader中进行判断。
 
