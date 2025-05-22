@@ -1,0 +1,169 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: m_hirco
+  m_Shader: {fileID: 4800000, guid: 67635dd21363d7c449f5a233aa2627c4, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _RAMPADD_ON
+  - _USE_REFLECTION_TEXTURE
+  m_InvalidKeywords:
+  - _CULL_OFF
+  - _VERTEXCOLOR_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 2002
+  stringTagMap:
+    ActorMaterialType: Actor
+  disabledShaderPasses:
+  - UniversalGBufferActorHairCover
+  - UniversalGBufferActorHair
+  - UniversalGBufferOutline
+  - OutlineMotionVectors
+  - DepthOnlyPass2
+  - UniversalForwardOutline
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AnisotropicMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 9c26ec501f65e4c4399619958d90a9b0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DefMap:
+        m_Texture: {fileID: 2800000, guid: f57e420e32cb403408286c601af0d565, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HighlightMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LayerMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampAddMap:
+        m_Texture: {fileID: 2800000, guid: 2937aad00d09af642a16e8036ad065be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RampMap:
+        m_Texture: {fileID: 2800000, guid: 5606a491ed8fc9f47b32ded42834edc6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ReflectionSphereMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ShadeMap:
+        m_Texture: {fileID: 2800000, guid: f9d40705cb27f1240ae45d0e846b9fc3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _ActorIndex: 15
+    - _AlphaClip: 0
+    - _AlphaPremultiply: 0
+    - _AlphaTest: 1
+    - _AnisotropicScale: 1
+    - _Blend: 0
+    - _BumpScale: 1
+    - _ClipValue: 0.33
+    - _ColorMask: 15
+    - _ColorMask1: 15
+    - _ColorMask2: 15
+    - _ColorMask3: 15
+    - _Cull: 0
+    - _CullAll: 0
+    - _Cutoff: 0.5
+    - _Debug: 0
+    - _DefDebugMask: 15
+    - _DetailNormalMapScale: 1
+    - _DisableDefMap: 0
+    - _DstAlphaBlend: 0
+    - _DstBlend: 0
+    - _DstBlend1: 0
+    - _DstBlend2: 0
+    - _DstBlend3: 0
+    - _EnableEmission: 0
+    - _EnableLayerMap: 0
+    - _EnableRampAddMap: 1
+    - _EnableReflectionSphereMap: 0
+    - _EnalbeHairCover: 0
+    - _EnvironmentReflections: 1
+    - _ForwardRefractRatio: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _LayerWeight: 0
+    - _Metallic: 0
+    - _Mode: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RefractThickness: 0
+    - _RenderMode: 0
+    - _ShaderType: 1
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularAdd: 0
+    - _SpecularHighlights: 1
+    - _SrcAlphaBlend: 1
+    - _SrcBlend: 1
+    - _SrcBlend1: 1
+    - _SrcBlend2: 1
+    - _SrcBlend3: 1
+    - _StencilComp: 8
+    - _StencilPass: 2
+    - _StencilReadMask: 108
+    - _StencilRef: 64
+    - _StencilWriteMask: 96
+    - _Surface: 0
+    - _USE: 0
+    - _UVSec: 0
+    - _UseLastFramePositions: 0
+    - _VertexColor: 1
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _DefValue: {r: 0.5, g: 0, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FadeParam: {r: 0.75, g: 2, b: 0.4, a: 4}
+    - _HeadDirection: {r: 0, g: 0, b: 0, a: 1}
+    - _HeadUpDirection: {r: 0, g: 0, b: 0, a: 1}
+    - _HighlightRotation: {r: 1, g: 0, b: 0, a: 1}
+    - _LayerParams: {r: 0, g: 0, b: 0, a: 0}
+    - _LayerWeight: {r: 0, g: 0, b: 0, a: 0}
+    - _LineDefParam: {r: 0.5, g: 0.1, b: 0, a: 0}
+    - _MultiplyColor: {r: 1, g: 1, b: 1, a: 1}
+    - _MultiplyOutlineColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 0, g: 0, b: 0, a: 0}
+    - _RampAddColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0, g: 0, b: 0, a: 0}
+    - _ShadeColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularThreshold: {r: 0.6, g: 0.05, b: 0, a: 0}
+  m_BuildTextureStacks: []
