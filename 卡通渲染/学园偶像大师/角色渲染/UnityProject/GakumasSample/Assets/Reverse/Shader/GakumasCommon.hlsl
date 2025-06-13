@@ -314,13 +314,13 @@ float4 frag( v2f i , bool IsFront : SV_IsFrontFace) : SV_Target
 
 	if (IsHair)
 	{
-		float IsMicroHair = saturate(i.UV.x - 0.75f) * saturate(i.UV.y - 0.75f);
-		IsMicroHair = IsMicroHair != 0;
+		float IsHairProp = saturate(i.UV.x - 0.75f) * saturate(i.UV.y - 0.75f);
+		IsHairProp = IsHairProp != 0;
 	
 		float HairSpecular = Pow4(saturate(dot(NormalWorM, ViewDirWorM)));
 		HairSpecular = smoothstep(_SpecularThreshold.x - _SpecularThreshold.y, _SpecularThreshold.x + _SpecularThreshold.y, HairSpecular);
 		HairSpecular *= SpecularIntensity;
-		HairSpecular = IsMicroHair ? 0 : HairSpecular;
+		HairSpecular = IsHairProp ? 0 : HairSpecular;
 		
 		float3 HighlightMap = SAMPLE_TEXTURE2D_BIAS(_HighlightMap, sampler_HighlightMap, i.UV.xy, TextureBias).xyz;
 		BaseMap.xyz = lerp(BaseMap.xyz, HighlightMap.xyz, HairSpecular);
@@ -335,7 +335,7 @@ float4 frag( v2f i , bool IsFront : SV_IsFrontFace) : SV_Target
 	
 		BaseMap.a = lerp(1, max(HairFadeX, HairFadeZ), BaseMap.a);
 	
-		SpecularIntensity *= IsMicroHair ? 1 : 0;
+		SpecularIntensity *= IsHairProp ? 1 : 0;
 	}
 	
 	float4 RampAddMap = 0;
