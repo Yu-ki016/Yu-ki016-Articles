@@ -210,8 +210,7 @@ Shader "Unlit/GakumasActor_Sample"
 	
 				float CameraDistance = length(_WorldSpaceCameraPos - PositionWS);
 				float OutLineWidth = min(CameraDistance * _OutlineParam.z * _OutlineParam.w, 1.0f);
-				OutLineWidth *=  (_OutlineParam.y - _OutlineParam.x);
-				OutLineWidth += (_OutlineParam.x);
+				OutLineWidth = lerp(_OutlineParam.x, _OutlineParam.y, OutLineWidth);
 				OutLineWidth *= 0.01f * VertexColor.OutLineWidth;
 				
 				float3 OffsetVector = OutLineWidth * SmoothNormalWS;
@@ -222,7 +221,6 @@ Shader "Unlit/GakumasActor_Sample"
 				OffsetedPositionCS.z -= VertexColor.OutLineOffset * 6.66666747e-05;
 
 				o.PositionCS = OffsetedPositionCS;
-				o.Color1.xyz = VertexColor.OutLineColor;
 				
 				return o;
 			}

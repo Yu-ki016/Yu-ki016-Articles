@@ -260,7 +260,7 @@ float4 frag( v2f i , bool IsFront : SV_IsFrontFace) : SV_Target
 	float MatCapNoL = dot(NormalMatS, _MatCapMainLight);
 	bool DisableMatCap = _MatCapMainLight.w > 0.5f;
 	NoL = DisableMatCap ? NoL : MatCapNoL;
-
+	
 	float Shadow = MainLightRealtimeShadow(i.ShadowCoord);
     float ShadowFadeOut = dot(-ViewVector, -ViewVector);
     ShadowFadeOut = saturate(ShadowFadeOut * _MainLightShadowParams.z + _MainLightShadowParams.w);
@@ -275,7 +275,7 @@ float4 frag( v2f i , bool IsFront : SV_IsFrontFace) : SV_Target
 	#ifdef _LAYERMAP_ON
     if (_LayerWeight != 0)
     {
-        float2 LayerMapUV = i.UV * float2(0.5f, 1.0f);
+        float2 LayerMapUV = i.UV.zw * float2(0.5f, 1.0f);
         float LayerMapTextureBias = _GlobalMipBias.x - 2;
         float4 LayerMap = SAMPLE_TEXTURE2D_BIAS(_LayerMap, sampler_LayerMap, LayerMapUV, LayerMapTextureBias);
         LayerMapColor = LayerMap.rgb;
@@ -476,7 +476,7 @@ float4 frag( v2f i , bool IsFront : SV_IsFrontFace) : SV_Target
 	#ifdef _ALPHAPREMULTIPLY_ON
         OutLighting *= Alpha;
 	#endif
-
+	
 	return float4(OutLighting, Alpha);
 }
 #endif
