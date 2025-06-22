@@ -39,7 +39,7 @@ public class SetGlobalAttributes : MonoBehaviour
     [ColorUsage(true, true)]
     public Color VLEyeSpecColor = Color.white;
     public Vector4 ReflectionSphereMapHDR = Vector4.one;
-    [Tooltip("x:Outline最小宽度;Y:Outline受距离影响的程度;Z和W作用一致都是控制宽度")]
+    [Tooltip("x:Outline最小宽度;Y:Outline最大宽度;Z和W作用一致都是控制宽度")]
     public Vector4 OutlineParam = new Vector4(0.05f, 5.0f, 0.011f, 0.45f);
     public Transform Head;
     

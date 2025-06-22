@@ -20,7 +20,7 @@ void Encode4BitTo8Bit(float4 A, float4 B, out float4 C)
 // A、B、C的取值范围都是[0, 1]
 void Decode4BitFrom8Bit(float4 C, out float4 A, out float4 B)
 {
-	const float k = 1.0f / 16.0f;
+	const float k = 1.0f / 15.0f;
 	float4 HighBit = floor(C * 15.9375f + 0.03125f);
 	float4 LowBit = C * 255.0f - HighBit * 16.0f;
 	A = HighBit * k;
